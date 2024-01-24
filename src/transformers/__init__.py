@@ -2091,7 +2091,12 @@ else:
         ]
     )
     _import_structure["models.llama"].extend(
-        ["LlamaForCausalLM", "LlamaForSequenceClassification", "LlamaModel", "LlamaPreTrainedModel"]
+        [
+            "LlamaForCausalLM",
+            "LlamaForQuestionAnswering",
+            "LlamaForSequenceClassification",
+            "LlamaModel",
+            "LlamaPreTrainedModel"]
     )
     _import_structure["models.longformer"].extend(
         [
@@ -5967,7 +5972,13 @@ if TYPE_CHECKING:
             LiltModel,
             LiltPreTrainedModel,
         )
-        from .models.llama import LlamaForCausalLM, LlamaForSequenceClassification, LlamaModel, LlamaPreTrainedModel
+        from .models.llama import (
+            LlamaForCausalLM,
+            LlamaForQuestionAnswering,
+            LlamaForSequenceClassification,
+            LlamaModel,
+            LlamaPreTrainedModel
+        )
         from .models.longformer import (
             LONGFORMER_PRETRAINED_MODEL_ARCHIVE_LIST,
             LongformerForMaskedLM,
